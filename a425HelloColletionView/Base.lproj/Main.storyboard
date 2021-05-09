@@ -39,14 +39,14 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="uur-YK-JMg" secondAttribute="bottom" id="8rD-1S-apw"/>
-                                                <constraint firstItem="uur-YK-JMg" firstAttribute="leading" secondItem="BwO-QO-7nz" secondAttribute="leading" id="Xgg-dP-XLg"/>
-                                                <constraint firstItem="uur-YK-JMg" firstAttribute="top" secondItem="BwO-QO-7nz" secondAttribute="top" id="gUD-qI-2Zj"/>
-                                                <constraint firstAttribute="trailing" secondItem="uur-YK-JMg" secondAttribute="trailing" id="mfM-lH-Gy6"/>
+                                                <constraint firstAttribute="trailing" secondItem="uur-YK-JMg" secondAttribute="trailing" id="6Pi-X1-hLj"/>
+                                                <constraint firstItem="uur-YK-JMg" firstAttribute="top" secondItem="BwO-QO-7nz" secondAttribute="top" id="7QF-ix-MvZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="uur-YK-JMg" secondAttribute="bottom" id="k3f-bB-m28"/>
+                                                <constraint firstItem="uur-YK-JMg" firstAttribute="leading" secondItem="BwO-QO-7nz" secondAttribute="leading" id="otD-OJ-bEK"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="theImageView" destination="uur-YK-JMg" id="Ji3-ag-Atw"/>
+                                            <outlet property="theImage" destination="uur-YK-JMg" id="U5b-YA-Qbj"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

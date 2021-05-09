@@ -8,6 +8,6 @@
 import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var theImageView: UIImageView!
+    @IBOutlet weak var theImage: UIImageView!
     
 }

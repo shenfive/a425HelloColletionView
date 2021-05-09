@@ -28,7 +28,46 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         theCollectionView.dataSource = self
         theCollectionView.delegate = self
         
+ 
+        self.setCollctionViewLayout()
+         
+        
+        
+        UIDevice.current.beginGeneratingDeviceOrientationNotifications()
+        NotificationCenter.default.addObserver(self, selector: #selector(shouldRotateObject(_:)), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
+    
+    
+    func setCollctionViewLayout(){
+        //設定Collection Flow
+        
+        
+        let layout = UICollectionViewFlowLayout()
+        
+        //取得畫面大小
+        let viewsize = self.view.bounds.size
+        
+        // 設置 section 的間距 四個數值分別代表 上、左、下、右 的間距
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        
+        // 設置每一行的間距
+        layout.minimumLineSpacing = 5
+
+        layout.itemSize = CGSize(width: viewsize.width / 3 - 10, height: viewsize.width / 3 - 10)
+        
+        
+        theCollectionView.setCollectionViewLayout(layout, animated: false)
+        
+        
+    }
+    
+    
+    
+    @objc func shouldRotateObject(_ sender:Any?){
+        print("rotate")
+    }
+
+    
 
     //MARK:CollectionView DataSource Delegate
     func collectionView(_ collectionView: UICollectionView,
@@ -38,11 +77,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCollectionViewCell
-        cell.theImageView.image = images[indexPath.row]
+        cell.theImage.image = images[indexPath.row]
         
         cell.backgroundColor = UIColor.red
         return cell
     }
-    
 }
 

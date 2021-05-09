@@ -13,7 +13,7 @@
 		3B43F9D22647899400A73479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B43F9D02647899400A73479 /* Main.storyboard */; };
 		3B43F9D42647899700A73479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B43F9D32647899700A73479 /* Assets.xcassets */; };
 		3B43F9D72647899700A73479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B43F9D52647899700A73479 /* LaunchScreen.storyboard */; };
-		3B43F9E1264790EC00A73479 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43F9E0264790EC00A73479 /* MyCollectionViewCell.swift */; };
+		3B43F9E3264794F400A73479 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B43F9E2264794F400A73479 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		3B43F9D32647899700A73479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B43F9D62647899700A73479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B43F9D82647899700A73479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B43F9E0264790EC00A73479 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B43F9E2264794F400A73479 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 				3B43F9D32647899700A73479 /* Assets.xcassets */,
 				3B43F9D52647899700A73479 /* LaunchScreen.storyboard */,
 				3B43F9D82647899700A73479 /* Info.plist */,
-				3B43F9E0264790EC00A73479 /* MyCollectionViewCell.swift */,
+				3B43F9E2264794F400A73479 /* MyCollectionViewCell.swift */,
 			);
 			path = a425HelloColletionView;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			files = (
 				3B43F9CF2647899400A73479 /* ViewController.swift in Sources */,
 				3B43F9CB2647899400A73479 /* AppDelegate.swift in Sources */,
-				3B43F9E1264790EC00A73479 /* MyCollectionViewCell.swift in Sources */,
+				3B43F9E3264794F400A73479 /* MyCollectionViewCell.swift in Sources */,
 				3B43F9CD2647899400A73479 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
