@@ -33,13 +33,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     //MARK:CollectionView DataSource Delegate
     func collectionView(_ collectionView: UICollectionView,
     numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = UICollectionViewCell(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCollectionViewCell
+        cell.theImageView.image = images[indexPath.row]
         
         cell.backgroundColor = UIColor.red
         return cell
