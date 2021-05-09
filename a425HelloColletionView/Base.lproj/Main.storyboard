@@ -98,6 +98,17 @@
                                     <constraint firstAttribute="width" secondItem="iHj-RB-7qx" secondAttribute="height" multiplier="1:1" id="ymX-ip-Qyl"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxs-xy-cAr">
+                                <rect key="frame" x="33" y="70" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="DxW-nk-wsi"/>
+                                    <constraint firstAttribute="height" constant="30" id="jaJ-ln-y1H"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="back:" destination="wYB-Cy-9Cn" eventType="touchUpInside" id="0XS-nD-VyO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uMQ-Kv-vMX"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -105,6 +116,8 @@
                             <constraint firstItem="iHj-RB-7qx" firstAttribute="centerY" secondItem="qqT-hx-N4r" secondAttribute="centerY" id="LGh-88-MB5"/>
                             <constraint firstItem="iHj-RB-7qx" firstAttribute="trailing" secondItem="uMQ-Kv-vMX" secondAttribute="trailing" id="cGM-t7-6QW"/>
                             <constraint firstItem="iHj-RB-7qx" firstAttribute="leading" secondItem="uMQ-Kv-vMX" secondAttribute="leading" id="dcE-C8-5GL"/>
+                            <constraint firstItem="Kxs-xy-cAr" firstAttribute="top" secondItem="uMQ-Kv-vMX" secondAttribute="top" constant="26" id="sBN-hz-T1E"/>
+                            <constraint firstItem="Kxs-xy-cAr" firstAttribute="leading" secondItem="uMQ-Kv-vMX" secondAttribute="leading" constant="33" id="y6q-0o-MbS"/>
                         </constraints>
                     </view>
                 </viewController>
