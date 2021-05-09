@@ -37,6 +37,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         NotificationCenter.default.addObserver(self, selector: #selector(shouldRotateObject(_:)), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
+    @objc func shouldRotateObject(_ sender:Any?){
+        setCollctionViewLayout()
+        print("rotate")
+    }
+
+    
+    
+    
     
     func setCollctionViewLayout(){
         //設定Collection Flow
@@ -63,9 +71,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     
-    @objc func shouldRotateObject(_ sender:Any?){
-        print("rotate")
-    }
 
     
 
