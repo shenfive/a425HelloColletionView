@@ -60,9 +60,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let layout = UICollectionViewFlowLayout()
         
-        //取得畫面大小
-        let viewsize = self.view.bounds.size
-        
+        //取得畫面 safeArea 大小
+//        let viewsize = self.view.bounds.size
+        let viewsize = view.safeAreaLayoutGuide.layoutFrame.size
         // 設置 section 的間距 四個數值分別代表 上、左、下、右 的間距
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         
