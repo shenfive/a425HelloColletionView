@@ -12,6 +12,9 @@ class MyImageViewController: UIViewController {
     @IBOutlet weak var theImageView: UIImageView!
     var selectedImage:UIImage? = nil
     
+    var nextImage:(()->())? = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,5 +31,8 @@ class MyImageViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-
+    @IBAction func callBack1(_ sender: Any) {
+        nextImage?()
+    }
+    
 }

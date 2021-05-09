@@ -104,6 +104,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         nextVC?.modalPresentationStyle = .fullScreen
         if let nextVC = nextVC{
             nextVC.selectedImage = images[indexPath.row]
+            nextVC.nextImage = {
+                print("nextImage")
+                nextVC.theImageView.image = self.images[indexPath.row + 1]
+            }
+            
+            
             self.present(nextVC, animated: true, completion: nil)
         }
         
