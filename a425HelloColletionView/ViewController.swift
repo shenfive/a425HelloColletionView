@@ -96,17 +96,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return cell
     }
     
+    var index = 0
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("選了 \(indexPath)")
         
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         let nextVC = storyBoard.instantiateViewController(identifier:  "myImageVC") as? MyImageViewController
         nextVC?.modalPresentationStyle = .fullScreen
+        index = indexPath.row
         if let nextVC = nextVC{
             nextVC.selectedImage = images[indexPath.row]
             nextVC.nextImage = {
                 print("nextImage")
-                nextVC.theImageView.image = self.images[indexPath.row + 1]
+                self.index += 1
+                nextVC.theImageView.image = self.images[self.index % self.images.count]
             }
             
             
