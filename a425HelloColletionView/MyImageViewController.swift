@@ -9,11 +9,21 @@ import UIKit
 
 class MyImageViewController: UIViewController {
 
+    @IBOutlet weak var theImageView: UIImageView!
+    var selectedImage:UIImage? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.theImageView.image = selectedImage
+    }
+    
+    
     @IBAction func back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

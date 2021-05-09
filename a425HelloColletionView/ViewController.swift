@@ -14,7 +14,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var images:[UIImage] = []
     
-    @IBOutlet weak var numberInLine: UISegmentedControl!
+    @IBOutlet weak var numberInLineSegment: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         theCollectionView.delegate = self
         
  
-        let numberInLine = CGFloat(numberInLine.selectedSegmentIndex + 3)
+        let numberInLine = CGFloat(numberInLineSegment.selectedSegmentIndex + 3)
         self.setCollctionViewLayout(numberInLine)
          
         
@@ -40,13 +41,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @objc func shouldRotateObject(_ sender:Any?){
-        let numberInLine = CGFloat(numberInLine.selectedSegmentIndex + 3)
+        let numberInLine = CGFloat(numberInLineSegment.selectedSegmentIndex + 3)
         setCollctionViewLayout(numberInLine)
         print("rotate")
     }
 
     @IBAction func nilx(_ sender: Any) {
-        let numberInLine = CGFloat(numberInLine.selectedSegmentIndex + 3)
+        let numberInLine = CGFloat(numberInLineSegment.selectedSegmentIndex + 3)
         setCollctionViewLayout(numberInLine)
     }
     
@@ -61,7 +62,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let layout = UICollectionViewFlowLayout()
         
         //取得畫面 safeArea 大小
-//        let viewsize = self.view.bounds.size
         let viewsize = view.safeAreaLayoutGuide.layoutFrame.size
         // 設置 section 的間距 四個數值分別代表 上、左、下、右 的間距
         layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
@@ -103,6 +103,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let nextVC = storyBoard.instantiateViewController(identifier:  "myImageVC") as? MyImageViewController
         nextVC?.modalPresentationStyle = .fullScreen
         if let nextVC = nextVC{
+            nextVC.selectedImage = images[indexPath.row]
             self.present(nextVC, animated: true, completion: nil)
         }
         
