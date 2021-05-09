@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uur-YK-JMg">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uur-YK-JMg">
                                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                 </imageView>
                                             </subviews>
@@ -51,17 +51,32 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uuo-Zt-CoW">
+                                <rect key="frame" x="50" y="64" width="314" height="32"/>
+                                <segments>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                </segments>
+                                <connections>
+                                    <action selector="nilx:" destination="BYZ-38-t0r" eventType="valueChanged" id="msw-lC-vRP"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ao8-m7-PE7" secondAttribute="bottom" constant="12" id="69x-yt-yYv"/>
+                            <constraint firstItem="Uuo-Zt-CoW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="AoZ-ig-G8q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uuo-Zt-CoW" secondAttribute="trailing" constant="50" id="MUX-9w-z9M"/>
+                            <constraint firstItem="Uuo-Zt-CoW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Syy-ec-UJ7"/>
                             <constraint firstItem="Ao8-m7-PE7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fXq-04-c1e"/>
                             <constraint firstItem="Ao8-m7-PE7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="yTu-Wt-ByC"/>
                             <constraint firstItem="Ao8-m7-PE7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="z07-tL-c4P"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="numberInLine" destination="Uuo-Zt-CoW" id="IXt-Ci-o82"/>
                         <outlet property="theCollectionView" destination="Ao8-m7-PE7" id="iVj-2f-cgc"/>
                     </connections>
                 </viewController>

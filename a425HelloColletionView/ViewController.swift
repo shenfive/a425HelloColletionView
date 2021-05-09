@@ -14,6 +14,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var images:[UIImage] = []
     
+    @IBOutlet weak var numberInLine: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +30,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         theCollectionView.delegate = self
         
  
-        self.setCollctionViewLayout()
+        let numberInLine = CGFloat(numberInLine.selectedSegmentIndex + 3)
+        self.setCollctionViewLayout(numberInLine)
          
         
         
@@ -38,15 +40,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @objc func shouldRotateObject(_ sender:Any?){
-        setCollctionViewLayout()
+        let numberInLine = CGFloat(numberInLine.selectedSegmentIndex + 3)
+        setCollctionViewLayout(numberInLine)
         print("rotate")
     }
 
+    @IBAction func nilx(_ sender: Any) {
+        let numberInLine = CGFloat(numberInLine.selectedSegmentIndex + 3)
+        setCollctionViewLayout(numberInLine)
+    }
     
     
     
     
-    func setCollctionViewLayout(){
+    
+    func setCollctionViewLayout(_ numberOfItemInLine:CGFloat){
         //設定Collection Flow
         
         
@@ -61,10 +69,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // 設置每一行的間距
         layout.minimumLineSpacing = 5
 
-        layout.itemSize = CGSize(width: viewsize.width / 3 - 10, height: viewsize.width / 3 - 10)
+        layout.itemSize = CGSize(width: viewsize.width / numberOfItemInLine - 10, height: viewsize.width / numberOfItemInLine - 10)
         
         
-        theCollectionView.setCollectionViewLayout(layout, animated: false)
+        theCollectionView.setCollectionViewLayout(layout, animated: true)
         
         
     }
@@ -84,7 +92,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCollectionViewCell
         cell.theImage.image = images[indexPath.row]
         
-        cell.backgroundColor = UIColor.red
+//        cell.backgroundColor = UIColor.red
         return cell
     }
 }
