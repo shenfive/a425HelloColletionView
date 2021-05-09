@@ -84,10 +84,41 @@
             </objects>
             <point key="canvasLocation" x="-13.043478260869566" y="53.571428571428569"/>
         </scene>
+        <!--My Image View Controller-->
+        <scene sceneID="OqU-Ha-trO">
+            <objects>
+                <viewController storyboardIdentifier="myImageVC" id="wYB-Cy-9Cn" customClass="MyImageViewController" customModule="a425HelloColletionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qqT-hx-N4r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iHj-RB-7qx">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iHj-RB-7qx" secondAttribute="height" multiplier="1:1" id="ymX-ip-Qyl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uMQ-Kv-vMX"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="iHj-RB-7qx" firstAttribute="centerY" secondItem="qqT-hx-N4r" secondAttribute="centerY" id="LGh-88-MB5"/>
+                            <constraint firstItem="iHj-RB-7qx" firstAttribute="trailing" secondItem="uMQ-Kv-vMX" secondAttribute="trailing" id="cGM-t7-6QW"/>
+                            <constraint firstItem="iHj-RB-7qx" firstAttribute="leading" secondItem="uMQ-Kv-vMX" secondAttribute="leading" id="dcE-C8-5GL"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pl6-zu-VMs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118.840579710145" y="47.544642857142854"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

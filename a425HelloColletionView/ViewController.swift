@@ -95,5 +95,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 //        cell.backgroundColor = UIColor.red
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("選了 \(indexPath)")
+        
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let nextVC = storyBoard.instantiateViewController(identifier:  "myImageVC") as? MyImageViewController
+        
+        if let nextVC = nextVC{
+            self.present(nextVC, animated: true, completion: nil)
+        }
+        
+    }
+    
 }
 
